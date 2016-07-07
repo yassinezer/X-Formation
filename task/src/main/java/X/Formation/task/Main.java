@@ -46,7 +46,7 @@ public class Main {
     	        switch (choice){
     			case 1:{
     				polishCuisine.addItem(new Baranina());
-                    polishCuisine.getMenu().parallelStream().filter(
+                    polishCuisine.getMenu().parallelStream().limit(1).filter(
                     		e->e.getName().equalsIgnoreCase("baranina")).forEach(
                     		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
     			}
@@ -61,7 +61,7 @@ public class Main {
     	        switch (choice){
     			case 1:{
     				polishCuisine.addItem(new Banane());
-                    polishCuisine.getMenu().parallelStream().filter(
+                    polishCuisine.getMenu().parallelStream().limit(1).filter(
                     		e->e.getName().equalsIgnoreCase("banane")).forEach(
                     		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
     			}
@@ -83,10 +83,10 @@ public class Main {
 			case 1:{ 
     			System.out.println("are you want to add ice Cubes: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice1=true;
+    			if(ch.equalsIgnoreCase("Y"))boolchoice1=true;
     			System.out.println("are you want to add Lemon: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice2=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice2=true;
     			
 			if(boolchoice1&& boolchoice2)
 			polishCuisine.addItem(new Fanta("icecubes", "lemon"));
@@ -97,7 +97,7 @@ public class Main {
 			else
     		polishCuisine.addItem(new Fanta("", ""));
 
-            polishCuisine.getMenu().parallelStream().filter(
+            polishCuisine.getMenu().parallelStream().limit(1).filter(
             		e->e.getName().equalsIgnoreCase("fanta")).forEach(
             		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
 			}
@@ -107,10 +107,10 @@ public class Main {
 			case 2:{
     			System.out.println("are you want to add ice Cubes: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice1=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice1=true;
     			System.out.println("are you want to add Lemon: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice2=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice2=true;
     			
 			if(boolchoice1&& boolchoice2)
 			polishCuisine.addItem(new Pepsi("icecubes", "lemon"));
@@ -122,7 +122,7 @@ public class Main {
     		polishCuisine.addItem(new Pepsi("", ""));
 
 
-                polishCuisine.getMenu().parallelStream().filter(
+                polishCuisine.getMenu().parallelStream().limit(1).filter(
                 		e->e.getName().equalsIgnoreCase("pepsi")).forEach(
                 		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
 			}
@@ -162,7 +162,7 @@ public class Main {
     	        switch (choice){
     			case 1:{
     				mexicanCuisine.addItem(new Camote());
-    				mexicanCuisine.getMenu().parallelStream().filter(
+    				mexicanCuisine.getMenu().parallelStream().limit(1).filter(
                     		e->e.getName().equalsIgnoreCase("camote")).forEach(
                     		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
     			}
@@ -177,7 +177,7 @@ public class Main {
     	        switch (choice){
     			case 1:{
     				mexicanCuisine.addItem(new Orange());
-    				mexicanCuisine.getMenu().parallelStream().filter(
+    				mexicanCuisine.getMenu().parallelStream().limit(1).filter(
                     		e->e.getName().equalsIgnoreCase("orange")).forEach(
                     		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
     			}
@@ -199,10 +199,10 @@ public class Main {
 			case 1:{ 
     			System.out.println("are you want to add ice Cubes: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice1=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice1=true;
     			System.out.println("are you want to add Lemon: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice2=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice2=true;
     			
 			if(boolchoice1&& boolchoice2)
 			mexicanCuisine.addItem(new Fanta("icecubes", "lemon"));
@@ -214,7 +214,7 @@ public class Main {
 				mexicanCuisine.addItem(new Fanta("", ""));
 
 
-			mexicanCuisine.getMenu().parallelStream().filter(
+			mexicanCuisine.getMenu().parallelStream().limit(1).filter(
             		e->e.getName().equalsIgnoreCase("fanta")).forEach(
             		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
 			}
@@ -224,10 +224,10 @@ public class Main {
 			case 2:{
 				System.out.println("are you want to add ice Cubes: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice1=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice1=true;
     			System.out.println("are you want to add Lemon: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice2=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice2=true;
     			
 			if(boolchoice1&& boolchoice2)
 			mexicanCuisine.addItem(new Pepsi("icecubes", "lemon"));
@@ -238,7 +238,7 @@ public class Main {
 			else
 				mexicanCuisine.addItem(new Pepsi("", ""));
 			
-			mexicanCuisine.getMenu().parallelStream().filter(
+			mexicanCuisine.getMenu().parallelStream().limit(1).filter(
                 		e->e.getName().equalsIgnoreCase("pepsi")).forEach(
                 		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
 			}
@@ -275,7 +275,7 @@ public class Main {
     	        switch (choice){
     			case 1:{
     				italianCuisine.addItem(new Culatello());
-    				italianCuisine.getMenu().parallelStream().filter(
+    				italianCuisine.getMenu().parallelStream().limit(1).filter(
                     		e->e.getName().equalsIgnoreCase("culatello")).forEach(
                     		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
     			}
@@ -290,7 +290,7 @@ public class Main {
     	        switch (choice){
     			case 1:{
     				italianCuisine.addItem(new Ananas());
-    				italianCuisine.getMenu().parallelStream().filter(
+    				italianCuisine.getMenu().parallelStream().limit(1).filter(
                     		e->e.getName().equalsIgnoreCase("ananas")).forEach(
                     		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
     			}
@@ -310,10 +310,10 @@ public class Main {
 			case 1:{ 
 				System.out.println("are you want to add ice Cubes: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice1=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice1=true;
     			System.out.println("are you want to add Lemon: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice2=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice2=true;
     			
 			if(boolchoice1&& boolchoice2)
 			italianCuisine.addItem(new Fanta("icecubes", "lemon"));
@@ -324,7 +324,7 @@ public class Main {
 			else
 				italianCuisine.addItem(new Fanta("", ""));
 
-			italianCuisine.getMenu().parallelStream().filter(
+			italianCuisine.getMenu().parallelStream().limit(1).filter(
             		e->e.getName().equalsIgnoreCase("fanta")).forEach(
             		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
 			}
@@ -334,10 +334,10 @@ public class Main {
 			case 2:{
 				System.out.println("are you want to add ice Cubes: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice1=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice1=true;
     			System.out.println("are you want to add Lemon: (Y/N)"); 
     			ch= br.readLine();
-    			if(ch =="Y") boolchoice2=true;
+    			if(ch.equalsIgnoreCase("Y")) boolchoice2=true;
     			
 			if(boolchoice1&& boolchoice2)
 			italianCuisine.addItem(new Pepsi("icecubes", "lemon"));
@@ -348,9 +348,10 @@ public class Main {
 			else
 				italianCuisine.addItem(new Pepsi("", ""));
 
-			italianCuisine.getMenu().parallelStream().filter(
-                		e->e.getName().equalsIgnoreCase("pepsi")).forEach(
-                		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
+
+			italianCuisine.getMenu().parallelStream().limit(1).filter(
+            		e->e.getName().equalsIgnoreCase("pepsi")).forEach(
+            		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
 			}
 			boolchoice1 = false;
 			boolchoice2 = false;
