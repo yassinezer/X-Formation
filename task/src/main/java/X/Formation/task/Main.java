@@ -47,10 +47,7 @@ public class Main {
     	        
     	        switch (choice){
     			case 1:{
-    				
-    				
     				polishCuisine.addItem(new Baranina());
-                    
     				polishCuisine.getMenu().parallelStream().limit(1).filter(
                     		e->e.getName().equalsIgnoreCase("baranina")).forEach(
                     		e->System.out.println("this price : "+e.getPrice() +" will be add to your ordering menu."));
