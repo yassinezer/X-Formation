@@ -26,6 +26,8 @@ public class Main {
 	static boolean boolchoice1= false;
 	static boolean boolchoice2= false;
 	static String ch="";
+	
+	
 
 	public static void PolishCuisine() throws NumberFormatException, IOException{
 
